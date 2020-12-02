@@ -1,3 +1,9 @@
+# Pré-requisitos
+
+- NodeJS >= 12.x.x
+- docker >= 19.x.x
+- docker-compose >= 1.x.x
+
 # Execução
 
 
