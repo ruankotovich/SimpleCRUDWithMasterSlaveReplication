@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="header">
+    <a href="#/todos/new">
+      <h1 class="lead">Adicionar nova tarefa...</h1>
+    </a>
+  </div> <br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Descrição</th>
+        <th>Completa</th>
+        <th>Editar / Deletar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="todo in todoData">
+        <td><a href="#/todos/{{todo.id}}">{{ todo.title }}</a></td>
+        <td>{{ todo.complete? 'Sim' : 'Não' }}</td>
+        <td>
+          <span class="glyphicon glyphicon-pencil" ng-click="goToEdit(todo.id)"></span>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="glyphicon glyphicon-trash" ng-click="deleteTodo(todo.id)"></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

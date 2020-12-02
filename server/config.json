@@ -1,0 +1,42 @@
+{
+  "development": {
+    "host": "127.0.0.1",
+    "port": "3306",
+    "dialect": "mysql",
+    "replication": {
+      "read": [
+        {
+          "host": "localhost",
+          "port": 4406,
+          "database": "todos_dev",
+          "username": "mydb_user",
+          "password": "mydb_pwd"
+        },
+        {
+          "host": "localhost",
+          "port": 5506,
+          "database": "todos_dev",
+          "username": "mydb_slave_user",
+          "password": "mydb_slave_pwd"
+        }
+      ],
+      "write": {
+        "host": "localhost",
+        "port": 4406,
+        "database": "todos_dev",
+        "username": "mydb_user",
+        "password": "mydb_pwd"
+      }
+    },
+    "pool": {
+      "maxConnections": 20,
+      "maxIdleTime": 30000
+    }
+  },
+  "production": {
+    "username": "todos_dev",
+    "password": "todos_dev",
+    "database": "todos_dev",
+    "dialect": "postgres"
+  }
+}
